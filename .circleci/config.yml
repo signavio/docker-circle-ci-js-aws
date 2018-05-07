@@ -6,15 +6,15 @@ jobs:
       - checkout
       # - setup_remote_docker
       - run:
-        name: Docker login
-        command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+          name: Docker login
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
       # build the application image
       - run: 
-        name: Build image
-        command: docker build -t signavio:circle-ci-java/app:$CIRCLE_BRANCH .
+          name: Build image
+          command: docker build -t signavio:circle-ci-java/app:$CIRCLE_BRANCH .
 
       # deploy the image
       - run: 
-        name: Push to docker hub
-        command: docker push signavio/circle-ci-java:$CIRCLE_BRANCH
+          name: Push to docker hub
+          command: docker push signavio/circle-ci-java:$CIRCLE_BRANCH
