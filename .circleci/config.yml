@@ -12,7 +12,7 @@ jobs:
       # build the application image
       - run: 
           name: Build image
-          command: docker build -t signavio:circle-ci-java/app:$CIRCLE_BRANCH .
+          command: docker build -t signavio/circle-ci-java:$CIRCLE_BRANCH .
 
       # deploy the image
       - run: 
