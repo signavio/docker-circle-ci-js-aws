@@ -12,4 +12,4 @@ The docker images includes the following tools
 - ...
 
 # Docker Hub repo
-
+https://hub.docker.com/r/signavio/circle-ci-java/
