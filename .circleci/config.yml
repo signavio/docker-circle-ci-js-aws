@@ -4,7 +4,6 @@ jobs:
     machine: true
     steps:
       - checkout
-      # - setup_remote_docker
       - run:
           name: Docker login
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS
@@ -12,9 +11,9 @@ jobs:
       # build the application image
       - run: 
           name: Build image
-          command: docker build -t signavio/circle-ci-java:latest .
+          command: docker build -t signavio/circle-ci-js:latest .
 
       # deploy the image
       - run: 
           name: Push to docker hub
-          command: docker push signavio/circle-ci-java:latest
+          command: docker push signavio/circle-ci-js:latest
