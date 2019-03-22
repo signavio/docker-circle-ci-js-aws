@@ -1,4 +1,4 @@
-# docker-circle-ci-node-k8s-puppeteer-aws-azure
+# docker-circle-ci-js-aws
 Docker image to build and deploy JS apps to k8s on aws, and test using puppeteer
 
 This work is based on Sergey Chikin's article on medium
