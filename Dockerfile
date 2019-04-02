@@ -24,6 +24,9 @@ RUN sudo pip install awscli
 # Puppeteer
 RUN sudo yarn global add puppeteer@1.8.0 && yarn cache clean
 
+# Sentry CLI
+RUN sudo curl -sL https://sentry.io/get-cli/ | bash
+
 ENV NODE_PATH="/usr/local/share/.config/yarn/global/node_modules:${NODE_PATH}"
 
 ENV PATH="/tools:${PATH}"
